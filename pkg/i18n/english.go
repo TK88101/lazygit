@@ -959,6 +959,8 @@ type Log struct {
 	CreateFileWithContent    string
 	AppendingLineToFile      string
 	EditRebaseFromBaseCommit string
+	DroppingStash            string
+	PoppingStash             string
 }
 
 type Actions struct {
@@ -2189,6 +2191,8 @@ func EnglishTranslationSet() *TranslationSet {
 			CreateFileWithContent:    "Creating file '{{.path}}'",
 			AppendingLineToFile:      "Appending '{{.line}}' to file '{{.filename}}'",
 			EditRebaseFromBaseCommit: "Beginning interactive rebase from '{{.baseCommit}}' onto '{{.targetBranchName}}",
+			DroppingStash:            "Dropping stash %s",
+			PoppingStash:             "Popping stash %s",
 		},
 		BreakingChangesTitle: "Breaking Changes",
 		BreakingChangesMessage: `You are updating to a new version of lazygit which contains breaking changes. Please review the notes below and update your configuration if necessary.
